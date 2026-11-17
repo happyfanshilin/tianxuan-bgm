@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFFFFF">
+<title>测测你的天选BGM</title>
+<meta name="description" content="24 个日常瞬间，20 首华语情歌。测出你的关系人格，找到那首替你说话的天选 BGM。">
+<meta property="og:title" content="测测你的天选BGM">
+<meta property="og:description" content="24 个日常瞬间，20 首华语情歌。哪一首，在替你说话？">
+<meta property="og:image" content="https://happyfanshilin.github.io/tianxuan-bgm/og-cover.png">
+<meta property="og:url" content="https://happyfanshilin.github.io/tianxuan-bgm/">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css?v=20261117a">
+</head>
+<body>
+<div class="phone">
+  <div id="app">
+
+    <section class="screen active" id="cover">
+      <div class="wordmark"><span class="t">BGM</span></div>
+      <p class="cover-kicker">SOUNDTRACK OF YOU</p>
+      <p class="cover-sub">测测你的天选BGM</p>
+      <div class="vinyl-stage" aria-hidden="true"><div class="vinyl"></div></div>
+      <button class="btn" id="startBtn" type="button">开始测试</button>
+      <div class="hint">3min 测出你的关系人格</div>
+      <div class="cover-count">24 个瞬间 · 20 首华语情歌</div>
+      <div class="watermark">
+        <div>有些话说不出口，就让一首歌替你唱完。</div>
+        <div>本测试仅供娱乐 · 不构成心理诊断</div>
+        <div>所有作答只留在你的浏览器</div>
+      </div>
+    </section>
+
+    <section class="screen" id="quiz">
+      <div class="topbar">
+        <button class="prev-btn" id="prevBtn" type="button" aria-label="上一题">←</button>
+        <span class="progress-text" id="progText">1 / 24</span>
+        <span class="progress-text muted">BGM</span>
+      </div>
+      <div class="bar"><i id="barFill"></i></div>
+      <div class="quiz-group">
+        <div class="q-card">
+          <div class="q-vinyl" aria-hidden="true"><div class="vinyl mini"></div></div>
+          <div class="q-label" id="qLabel">01 · 深夜消息</div>
+          <div class="q-title" id="qTitle"></div>
+        </div>
+        <div class="opts" id="opts"></div>
+      </div>
+    </section>
+
+    <section class="screen" id="result">
+      <div class="res-hero" id="banner">
+        <div class="res-vinyl" aria-hidden="true"><div class="vinyl mini"></div></div>
+        <div class="res-label">你的天选BGM</div>
+        <div class="res-name" id="resName"></div>
+        <div class="res-title" id="resTitle"></div>
+      </div>
+      <div class="res-body">
+        <div class="res-quote" id="resQuote"></div>
+        <div class="res-desc" id="resDesc"></div>
+        <div class="chart-box">
+          <div class="chart-title">你的关系光谱</div>
+          <div class="chart" id="chart"></div>
+        </div>
+        <div class="tags" id="resTags"></div>
+        <div class="pair-box">
+          <div class="pair-item" id="matchLine"></div>
+          <div class="pair-item" id="cueLine"></div>
+        </div>
+        <a class="listen-line" id="listenLink" href="#" target="_blank" rel="noopener noreferrer">去音乐平台听这首歌 ↗</a>
+      </div>
+      <div class="res-count" id="resCount"></div>
+      <div class="actions">
+        <div class="action-row">
+          <button class="btn ghost" id="againBtn" type="button">再测一次</button>
+        </div>
+        <button class="btn" id="shareBtn" type="button">分享给朋友</button>
+      </div>
+      <div class="share-note">分享链接会带上你的结果，朋友点开就能看到同一首</div>
+      <button class="egg-entry" id="eggBtn" type="button">
+        <span class="egg-note" aria-hidden="true">♪</span>
+        <span>一个不太显眼的彩蛋</span>
+        <span class="egg-arrow" aria-hidden="true">→</span>
+      </button>
+      <div class="watermark">
+        <div>本测试仅供娱乐 · 歌曲版权归原作者所有</div>
+        <div>本站不提供音频 · 所有作答只留在你的浏览器</div>
+      </div>
+    </section>
+
+    <section class="screen" id="egg">
+      <div class="egg-head">
+        <button class="egg-back" id="eggBack" type="button">← 返回结果</button>
+        <span class="egg-kicker">Easter Egg</span>
+      </div>
+      <div class="egg-letter" id="eggLetter"></div>
+    </section>
+
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="data.js?v=20261105a"></script>
+<script src="app.js?v=20261117a"></script>
+</body>
+</html>
